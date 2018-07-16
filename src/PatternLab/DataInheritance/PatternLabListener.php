@@ -39,6 +39,8 @@ class PatternLabListener extends \PatternLab\Listener {
       $storeData        = Data::get();
       $storePatternData = PatternData::get();
       
+      print "storeData = $storeData";
+      
       foreach ($storePatternData as $patternStoreKey => $patternData) {
         
         if (isset($patternData["lineages"]) && (count($patternData["lineages"]) > 0)) {
