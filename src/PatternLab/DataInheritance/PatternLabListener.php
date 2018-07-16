@@ -40,6 +40,10 @@ class PatternLabListener extends \PatternLab\Listener {
       $storePatternData = PatternData::get();
       
       print "storeData = $storeData";
+      print_r($storeData);
+      
+      print "storePatternData = $storePatternData";
+      print_r($storePatternData);
       
       foreach ($storePatternData as $patternStoreKey => $patternData) {
         
@@ -48,6 +52,9 @@ class PatternLabListener extends \PatternLab\Listener {
           $dataLineage = array();
           
           foreach($patternData["lineages"] as $lineage) {
+            
+            print "lineage = $lineage";
+            print_r($lineage);
             
             // merge the lineage data with the lineage store. newer/higher-level data is more important.
             $lineageKey  = $lineage["lineagePattern"];
