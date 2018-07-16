@@ -24,6 +24,7 @@ class PatternLabListener extends \PatternLab\Listener {
   public function __construct() {
     
     // add listener
+    print "Trace plugin begin";
     $this->addListener("patternData.lineageHelperEnd","inherit");
     
   }
